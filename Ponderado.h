@@ -637,15 +637,9 @@ public:
                     if (arvore.floresta_pertencente == floresta_b)
                         arvore.floresta_pertencente = stp.floresta.at(stp.control.at(i).a).floresta_pertencente;
                 }
-
-                stp.control.erase(stp.control.begin());
-                i--;
-            }
-            else {
-                stp.control.erase(stp.control.begin());
-                i--;
             }
         }
+
         for (soluction t : stp.soluctions) {
             cout<<"\n"<<t.a<<" "<<t.b<<":"<<t.peso;
         }
