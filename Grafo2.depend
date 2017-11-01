@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1505496015 source:c:\users\gisele\desktop\grafo2\main.cpp
+	<iostream>
+	"interface.h"
+
+1509539577 c:\users\gisele\desktop\grafo2\interface.h
+	"Orientado.h"
+	"Ponderado.h"
+	<windows.h>
+
+1506717007 c:\users\gisele\desktop\grafo2\orientado.h
+	<vector>
+	<windows.h>
+
+1509561977 c:\users\gisele\desktop\grafo2\ponderado.h
+	<vector>
+	<queue>
+
