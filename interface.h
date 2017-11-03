@@ -235,7 +235,7 @@ void interface_Ponderado () {
     g.inserir_ligacao("E", "C", 2);*/
 
 
-    g.inserir_vertice("A"); //0
+    /*g.inserir_vertice("A"); //0
     g.inserir_vertice("B"); //1
     g.inserir_vertice("C"); //2
     g.inserir_vertice("D"); //3
@@ -251,21 +251,12 @@ void interface_Ponderado () {
     g.inserir_ligacao("E", "C", 9);
     g.inserir_ligacao("C", "B", 3);
     g.inserir_ligacao("F", "B", 2);
-    g.inserir_ligacao("F", "C", 3);
+    g.inserir_ligacao("F", "C", 3);*/
 
-    /*g.inserir_vertice("A");
+    g.inserir_vertice("A");
     g.inserir_vertice("B");
-    g.inserir_vertice("C");
-    g.inserir_vertice("D");
-    g.inserir_vertice("E");
 
     g.inserir_ligacao("A", "B", 3);
-    g.inserir_ligacao("A", "C", 5);
-    g.inserir_ligacao("A", "D", 6);
-    g.inserir_ligacao("A", "E", 8);
-    g.inserir_ligacao("B", "D", 2);
-    g.inserir_ligacao("B", "E", 11);
-    g.inserir_ligacao("C", "E", 2);*/
 
     while (true) {
         system("CLS");
@@ -284,6 +275,8 @@ void interface_Ponderado () {
         cout<<"11- Dsatur\n";
         cout<<"12- Dijkstra\n";
         cout<<"13- prim\n";
+        cout<<"14- Kruskal\n";
+        cout<<"15- verificar planaridade\n";
         g.print_grafo();
 
         cin>>opc;
@@ -386,6 +379,11 @@ void interface_Ponderado () {
             case 14:
                 system("CLS");
                 g.kruskal();
+                system("PAUSE");
+                break;
+            case 15:
+                system("CLS");
+                g.verifica_planaridade();
                 system("PAUSE");
                 break;
         }

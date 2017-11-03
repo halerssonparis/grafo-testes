@@ -16,3 +16,20 @@
 	<vector>
 	<queue>
 
+1505496015 source:c:\users\gisele\desktop\grafotestes\grafo-testes\main.cpp
+	<iostream>
+	"interface.h"
+
+1509717106 c:\users\gisele\desktop\grafotestes\grafo-testes\interface.h
+	"Orientado.h"
+	"Ponderado.h"
+	<windows.h>
+
+1506717007 c:\users\gisele\desktop\grafotestes\grafo-testes\orientado.h
+	<vector>
+	<windows.h>
+
+1509716970 c:\users\gisele\desktop\grafotestes\grafo-testes\ponderado.h
+	<vector>
+	<queue>
+

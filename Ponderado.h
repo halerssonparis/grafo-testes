@@ -604,6 +604,8 @@ public:
             cout<<solucao.a<<" "<<solucao.b<<"\n";
     }
 
+    bool _sort(soluction i, soluction j) { return i.peso > j.peso; }
+
     spanning_tree_kruskal init_tree() {
         spanning_tree_kruskal stp;
         stp.control = ligacao;
@@ -614,6 +616,8 @@ public:
             add.floresta_pertencente = retornar_vertice(vertice_atual.nome);
             stp.floresta.push_back(add);
         }
+
+        //sort(stp.control.begin(), stp.control.end(), _sort);
 
         for (int i = 0; i < stp.control.size(); i++) {
             for (int j = 0; j < stp.control.size()-1; j++) {
@@ -643,6 +647,41 @@ public:
         for (soluction t : stp.soluctions) {
             cout<<"\n"<<t.a<<" "<<t.b<<":"<<t.peso;
         }
+    }
+
+    bool tem_ciclo () {
+        for (int i = 0; i < lista_adj.size(); i++) {
+            for (int j = 1; j < lista_adj.at(i).size(); j++) {
+                int k = retornar_vertice(lista_adj.at(i).at(j).nome);
+                for (int l = 1; l < lista_adj.at(k).size(); l++) {
+                    if (lista_adj.at(k).at(l).nome == lista_adj.at(i).at(0).nome) {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+    bool verifica_planaridade() {
+        if (nomes.size() <= 2) {
+            cout<<"é planar";
+            return true;
+        }
+        else if ((nomes.size() >= 3) &&
+                 (ligacao.size() <= (3 * nomes.size())-6) &&
+                 (tem_ciclo())) {
+            cout<<"pode ser planar";
+            return true;
+        }
+        else if ((nomes.size() >= 3) &&
+                 (ligacao.size() <= (2 * nomes.size())-4) &&
+                 (!tem_ciclo())) {
+            cout<<"pode ser planar";
+            return true;
+        }
+        cout<<"não é planar";
+        return false;
     }
 };
 
