@@ -235,7 +235,7 @@ void interface_Ponderado () {
     g.inserir_ligacao("E", "C", 2);*/
 
 
-    /*g.inserir_vertice("A"); //0
+    g.inserir_vertice("A"); //0
     g.inserir_vertice("B"); //1
     g.inserir_vertice("C"); //2
     g.inserir_vertice("D"); //3
@@ -251,12 +251,12 @@ void interface_Ponderado () {
     g.inserir_ligacao("E", "C", 9);
     g.inserir_ligacao("C", "B", 3);
     g.inserir_ligacao("F", "B", 2);
-    g.inserir_ligacao("F", "C", 3);*/
+    g.inserir_ligacao("F", "C", 3);
 
-    g.inserir_vertice("A");
+   /* g.inserir_vertice("A");
     g.inserir_vertice("B");
 
-    g.inserir_ligacao("A", "B", 3);
+    g.inserir_ligacao("A", "B", 3);*/
 
     while (true) {
         system("CLS");

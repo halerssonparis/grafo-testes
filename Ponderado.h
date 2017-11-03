@@ -654,8 +654,10 @@ public:
             for (int j = 1; j < lista_adj.at(i).size(); j++) {
                 int k = retornar_vertice(lista_adj.at(i).at(j).nome);
                 for (int l = 1; l < lista_adj.at(k).size(); l++) {
-                    if (lista_adj.at(k).at(l).nome == lista_adj.at(i).at(0).nome) {
-                        return true;
+                    int m = retornar_vertice(lista_adj.at(k).at(l).nome);
+                    for (int n = 1; n < lista_adj.at(m).size(); m++) {
+                        if (lista_adj.at(m).at(n).nome == lista_adj.at(i).at(0).nome)
+                            return true;
                     }
                 }
             }
